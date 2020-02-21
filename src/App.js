@@ -145,7 +145,7 @@ function App() {
             <div></div>
           </h1>
           <div className="header-items">
-            <a href="./documents/CV_HeungseokPark.pdf">CV (PDF)</a>
+            <a href="https://github.com/heungseok/heungseok.github.io/raw/master/src/documents/CV_HeungseokPark.pdf">CV (PDF)</a>
           </div>
           
         </div>
@@ -154,7 +154,7 @@ function App() {
         <div className="contents flex row">
           <div className="profile">
             <div>
-              <img src="./images/profile_image.jpeg" alt="failed to load"/>
+              <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/raw/master/src/images/profile_image.jpeg" alt="failed to load"/>
             </div>
             <div>
               <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2@gmail.com</a>
