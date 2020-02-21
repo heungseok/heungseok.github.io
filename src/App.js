@@ -156,23 +156,25 @@ function App() {
           <div className="profile">
             <div>
               {/* <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/raw/master/src/images/profile_image.jpeg" alt="failed to load"/> */}
-              <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/blob/master/static/images/profile_image.jpeg" alt="failed to load"/>
+              <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/blob/master/static/images/profile_image.jpeg?raw=true" alt="failed to load"/>
             </div>
-            <div>
-              <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2@gmail.com</a>
-            </div>
-            <div>
-              <Icon>school</Icon><a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>
-            </div>
-            <div>
-              <LinkedIn style={{ marginRigth: '5px'}} /><a href="https://www.linkedin.com/in/heungseok2/"> LinkedIn</a>
+            <div className="contacts">
+              <div>
+                <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2@gmail.com</a>
+              </div>
+              <div>
+                <Icon>school</Icon><a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>
+              </div>
+              <div>
+                <LinkedIn style={{ marginRigth: '5px'}} /><a href="https://www.linkedin.com/in/heungseok2/"> LinkedIn</a>
+              </div>
             </div>
           </div>
           <div className="bio">
             <div className="intro">
               <p>
                 Hi! I'm a data visualization researcher and engineer at the NAVER Corporation. 
-                I'm currently designing and developing a Visaul analics system for AutoML on the cloud-based machine learning platform in Clova AI at Naver Corporation.
+                I'm currently designing and developing a Visaul analytics system for AutoML on the cloud-based machine learning platform in Clova AI at Naver Corporation.
                 I was interested in data analysis since undergraduate years, specifically in data visualization.
                 I love the quote that “Never trust summary statistics alone, always visualize your data”. 
               </p>

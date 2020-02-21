@@ -50,7 +50,7 @@ html {
 }
 
 .contents.flex.row {
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 .profile {
@@ -58,11 +58,16 @@ html {
   padding: 20px;
 }
 
-.profile div {
+.contacts>div {
   padding: 4px;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
+}
+
+.profile .contacts {
+  display: flex;
+  flex-direction: column;
 }
 
 .profile div span {
@@ -114,4 +119,99 @@ html {
 
 .venue {
   font-style: italic;
+}
+
+
+
+
+/* media query */
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  html {
+    /* font-size: 14px; */
+  }
+  .contents.flex {
+    flex-direction: row;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  html {
+    /* font-size: 14px; */
+  }
+
+  .contents.flex {
+    flex-direction: row;
+  }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contents.flex {
+    flex-direction: row;
+  }
+  
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .contents.flex {
+    flex-direction: row;
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    /* For tablets: */
+  .contents.flex {
+    flex-direction: column;
+  }
+
+  .bio {
+    width: 100%;
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .contents.flex {
+    flex-direction: column;
+  }
+  
+  .bio {
+    width: 100%;
+  }
+
+  .profile {
+    display: flex;
+  }
 }
