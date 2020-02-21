@@ -8,7 +8,7 @@ const educationItems = [
   {
     title: "KAIST (Korea Advanced of Institute and Technology)",
     description: "M.S. in Graduate School of Cultur Technology (Social Computing)",
-    duration: "Mar. 2016 - Exp. Feb. 2018"
+    duration: "Mar. 2016 - Feb. 2018"
   },
   {
     title: "Ajou University",

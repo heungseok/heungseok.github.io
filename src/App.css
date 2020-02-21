@@ -109,6 +109,11 @@ html {
   width: 70%;
 }
 
+.BioItem .main>div, .PaperItem .main>div {
+  padding-bottom: 8px;
+}
+
+
 .BioItem .sub, .PaperItem .sub {
   color: grey;
 }
@@ -203,10 +208,17 @@ html {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 10px;
+  }
   .contents.flex {
     flex-direction: column;
   }
-  
+
   .bio {
     width: 100%;
   }
