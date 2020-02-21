@@ -6,7 +6,7 @@ import { LinkedIn } from '@material-ui/icons';
 
 const educationItems = [
   {
-    title: "KAIST (Korea Advanced of Institute and Technology)",
+    title: "KAIST (Korea Advanced Institute of Science and Technology)",
     description: "M.S. in Graduate School of Cultur Technology (Social Computing)",
     duration: "Mar. 2016 - Feb. 2018"
   },
