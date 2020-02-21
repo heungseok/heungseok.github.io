@@ -126,9 +126,6 @@ html {
   font-style: italic;
 }
 
-
-
-
 /* media query */
 /* 
   ##Device = Desktops
@@ -183,6 +180,9 @@ html {
     flex-direction: row;
   }
   
+  .bio {
+    width: 100%;
+  }
 }
 
 /* 
@@ -194,6 +194,12 @@ html {
     /* For tablets: */
   .contents.flex {
     flex-direction: column;
+  }
+
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
   }
 
   .bio {
@@ -227,3 +233,4 @@ html {
     display: flex;
   }
 }
+
