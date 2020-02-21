@@ -156,7 +156,7 @@ function App() {
           <div className="profile">
             <div>
               {/* <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/raw/master/src/images/profile_image.jpeg" alt="failed to load"/> */}
-              <img width="150px" height="200px" src="/static/images/profile_image.jpeg" alt="failed to load"/>
+              <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/blob/master/static/images/profile_image.jpeg" alt="failed to load"/>
             </div>
             <div>
               <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2@gmail.com</a>
