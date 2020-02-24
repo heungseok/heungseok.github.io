@@ -186,8 +186,11 @@ a {
   .contents.flex {
     flex-direction: row;
   }
-  
 
+  .teaserImg {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 /* 
@@ -207,6 +210,8 @@ a {
   .teaserImg {
     width: 130px;
     height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -232,8 +237,11 @@ a {
   }
 
   .teaserImg {
-    width: 130px;
+    width: 120px;
     height: 100px;
+    margin-left: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   
 }
@@ -264,9 +272,11 @@ a {
   }
 
   .teaserImg {
-    width: 65px;
-    height: 50px;
+    width: 120px;
+    height: 100px;
     margin-left: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .PaperItem {

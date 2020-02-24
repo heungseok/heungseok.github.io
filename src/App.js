@@ -137,7 +137,7 @@ class BioItem extends React.PureComponent {
     return(
       <div className="BioItem">
         <div className="main">
-          <div className="title">{links && <a href={links} target="_blank">{title}</a>}</div>
+          <div className="title">{links ? <a href={links} target="_blank">{title}</a> : title}</div>
           <div>{description}</div>
         </div>               
         <div className="sub">
