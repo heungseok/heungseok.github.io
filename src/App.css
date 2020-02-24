@@ -26,13 +26,13 @@ html {
   color: darkgray !important;
 }
 
-.header-items>a:hover {
-  color: dodgerblue;
-}
-
 .title {
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title>a:hover, .header-items>a:hover {
+  color: dodgerblue;
 }
 
 .title>a, .header-items>a {
@@ -40,17 +40,13 @@ html {
   text-decoration: none !important;
 }
 
-.profile a {
-  color: dodgerblue !important;
+a {
   text-decoration: none !important;
+  color: dodgerblue;
 }
 
 .contents.flex {
   display: flex;
-}
-
-.contents.flex.row {
-  /* flex-direction: row; */
 }
 
 .profile {
@@ -85,6 +81,10 @@ html {
   width: calc(100% - 200px);
 }
 
+.bio.full-width {
+  width: 100%;
+}
+
 .bio>div {
   padding: 14px;
 }
@@ -103,6 +103,19 @@ html {
   padding: 10px;
   align-items: center;
   font-size: 0.9rem;
+}
+
+.teaserImg {
+  width: 160px;
+  height: 120px;
+  margin: 5px;
+  background-size: cover;
+  background-position: top left;
+  transition: all 2s,
+}
+
+.teaserImg:hover {
+  background-position: bottom right;
 }
 
 .BioItem .main, .PaperItem .main {
@@ -124,6 +137,13 @@ html {
 
 .venue {
   font-style: italic;
+}
+
+.linkItems {
+  display: flex;
+}
+.linkItems>div {
+  padding-right: 8px;
 }
 
 /* media query */
@@ -183,6 +203,11 @@ html {
   .bio {
     width: 100%;
   }
+
+  .teaserImg {
+    width: 130px;
+    height: 100px;
+  }
 }
 
 /* 
@@ -204,6 +229,11 @@ html {
 
   .bio {
     width: 100%;
+  }
+
+  .teaserImg {
+    width: 130px;
+    height: 100px;
   }
   
 }
@@ -231,6 +261,17 @@ html {
 
   .profile {
     display: flex;
+  }
+
+  .teaserImg {
+    width: 65px;
+    height: 50px;
+    margin-left: 0px;
+  }
+
+  .PaperItem {
+    padding: 5px;
+    font-size: 0.7rem;
   }
 }
 

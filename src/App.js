@@ -25,14 +25,16 @@ const educationItems = [
 
 const experienceItems = [
   {
-    title: "Clova AI Research, NAVER",
+    title: "Clova AI, NAVER",
     description: "Visualization Engineer & Researcher, Front-end web developer",
-    duration: "Feb. 2018 - Now"
+    duration: "Feb. 2018 - Now",
+    links: "https://clova.ai/"
   },
   {
     title: "3Secondz",
     description: "Visualization Engineer, Front-end web developer",
-    duration: "May. 2017 - Jan. 2018"
+    duration: "May. 2017 - Jan. 2018",
+    links: "https://3secondz.com/"
   }
 ]
 
@@ -44,54 +46,98 @@ const paperItems = [
     author: "Heungseok Park, Jinwoong Kim, Minkyu Kim, Ji-hoon Kim, Jaegul Choo, Jung-Woo Ha, and Nako Sung",
     venue: "In Proc. International Conference on Machine Learning and Systems (MLSys)",
     date: "2019",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/VisualHyperTuner.png?raw=true",
+    linkItem: {
+      paper: "https://mlsys.org/Conferences/2019/doc/2019/demo_12.pdf"
+    }
   },
   {
     title: "CHOPT : Automated Hyperparameter Optimization Framework for Cloud-Based Machine Learning Platforms",
     author: "Jinwoong Kim, Minkyu Kim, Heungseok Park, Ernar Kusdavletov, Dongjun Lee, Adrian Kim, Ji-Hoon Kim, Jung-Woo Ha, and Nako Sung",
     venue: "arXiv",
     date: "2018",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/CHOPT.png?raw=true",
+    linkItem: {
+      paper: "https://arxiv.org/abs/1810.03527",
+      deview: "https://tv.naver.com/v/4584592"
+    }
   },
   {
     title: "NSML: Meet the MLaaS platform with a real-world case study",
     author: "Hanjoo Kim, Minkyu Kim, Dongjoo Seo, Jinwoong Kim, Heungseok Park, Soeun Park, Hyunwoo Jo, KyungHyun Kim, Youngil Yang, Youngkwan Kim, Nako Sung, and Jung-Woo Ha",
     venue: "arXiv",
     date: "2018",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/NSML.png?raw=true",
+    linkItem: {
+      paper: "https://arxiv.org/abs/1810.09957",
+      deview: "https://tv.naver.com/v/4584592",
+    }
   },
   {
     title: "What makes a Successful Course at MOOCs? The Effects of the Structural Positions in Review Networks on the Course's Popularity and Satisfaction",
     author: "Heungseok Park, Wonjae Lee",
     venue: "Master Thesis",
     date: "2018",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/master_thesis.png?raw=true",
+    linkItem: {
+      paper: "http://library.kaist.ac.kr/search/detail/view.do?bibCtrlNo=733784&flag=dissertation"
+    }
   },
   {
     title: "NetSet: A Systematic integration of visualization for analyzing set intersections with network",
     author: "Heungseok Park, Hongjun Lim, Wonjae Lee, and Kyungwon Lee",
     venue: "In Proc. IEEE Pacific Visualization Symposium (PacificVis)",
     date: "2017",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/netset_paper.png?raw=true",
+    linkItem: {
+      paper: "https://ieeexplore.ieee.org/document/8031575",
+      video: "https://www.youtube.com/watch?v=JCwPI2w7UbU",
+    }
   },
   {
     title: "Extracting Placeness from Social Media: an Ontology-Based System",
     author: "Jee Jung Choi, Jungmin Kim, Heungseok Park, and Wonjae Lee, ",
     venue: "In Proc. IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)",
     date: "2017",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/placeness.png?raw=true",
+    linkItem: {
+      paper: "https://dl.acm.org/citation.cfm?id=3116198",
+    }
   },
   {
     title: "NetSet: Interactive Visualization for Analyzing Sets in Large Networks",
     author: "Heungseok Park, Hongjun Lim, and Kyungwon Lee",
     venue: "Poster, IEEE VIS Conference, Visualization in Data Science (VDS) Symposium",
     date: "2015",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/netset_poster.png?raw=true",
+    linkItem: {
+      poster: "https://drive.google.com/open?id=0B0rjoVKRVsodQURSUkp6TFcwalE",
+    }
   }
-]
+];
 
+const presentationItems = [ 
+  {
+    title: "Beyond TensorBoard: Sharing experience in developing interactive visual analytics services for AutoML (Korean)",
+    author: "Heungseok Park",
+    venue: "Naver Corporation",
+    date: "2018",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/fe_devtalk_automl.png?raw=true",
+    linkItem: {
+      video: "https://www.youtube.com/watch?v=49af9705nFE&t=11s",
+      slides: "https://www.slideshare.net/NaverEngineering/beyond-tensorboard-automl-interactive-visual-analytics",
+    }
+  },
+]
 
 class BioItem extends React.PureComponent {
 
   render() {
-    const { item: { title, description, duration }} = this.props;
+    const { item: { title, description, duration, links }} = this.props;
     return(
       <div className="BioItem">
         <div className="main">
-          <div className="title">{title}</div>
+          <div className="title">{links && <a href={links} target="_blank">{title}</a>}</div>
           <div>{description}</div>
         </div>               
         <div className="sub">
@@ -105,10 +151,14 @@ class BioItem extends React.PureComponent {
 class PaperItem extends React.PureComponent {
 
   render() {
-    const { item: { title, author, venue, date, items }} = this.props;
+    const { item: { title, author, venue, image, date, linkItem }} = this.props;
     const authors = author.split(',');
     return(
       <div className="PaperItem">
+        <div className="teaserImg" style={{
+          backgroundImage: `url("${image}")`
+        }}>
+        </div>
         <div className="main">
           <div className="title">{title}</div>
           <div>
@@ -124,7 +174,11 @@ class PaperItem extends React.PureComponent {
                 }
           </div>
           <div className="venue">{venue}</div>
-          { items && <div>{items}</div>}
+          {
+            linkItem && <div className="linkItems">
+              {Object.keys(linkItem).map(type => <div><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
+            </div>
+          }
         </div>               
         <div className="sub">
           {date}
@@ -173,10 +227,14 @@ function App() {
           <div className="bio">
             <div className="intro">
               <p>
-                Hi! I'm a data visualization researcher and engineer at the NAVER Corporation. 
-                I'm currently designing and developing a Visaul analytics system for AutoML on the cloud-based machine learning platform in Clova AI at Naver Corporation.
-                I was interested in data analysis since undergraduate years, specifically in data visualization.
-                I love the quote that “Never trust summary statistics alone, always visualize your data”. 
+                Hi! I'm a data visualization researcher and engineer of Clova AI at the <a href="https://www.navercorp.com/">NAVER Corporation</a>. 
+
+                The goal of my current career is to design visualization that help people understand and interpret AI more easily.
+                I'm currently designing and developing various visaul analytics systems, which assists users in analyzing and steering deep learning models, hyperparameter optimization process, and active learning process, on the cloud-based machine learning platform.
+
+                I was interested in data analysis since undergraduate years, specifically in information visualization, 
+                and love the quote that “Never trust summary statistics alone, always visualize your data”.
+
               </p>
             </div>
 
@@ -193,22 +251,28 @@ function App() {
                 experienceItems.map(d => <BioItem key={d.title} item={d} />)
               }
             </div>
+          </div>
 
+        </div>
+
+        <div className="contents flex row">
+          <div className="bio full-width">
             <div>
               <h3>Publications</h3>
               {
                 paperItems.map(d => <PaperItem key={d.title} item={d} />)
               }
             </div>
-            
+
+            <div>
+              <h3>Talks</h3>
+              {
+                presentationItems.map(d => <PaperItem key={d.title} item={d} />)
+              }
+            </div>
           </div>
-
         </div>
-
-
-
-
-
+            
       </div>
     </div>
   );
