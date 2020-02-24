@@ -7,12 +7,12 @@ import { LinkedIn } from '@material-ui/icons';
 const educationItems = [
   {
     title: "KAIST (Korea Advanced Institute of Science and Technology)",
-    description: "M.S. in Graduate School of Cultur Technology (Social Computing)",
+    description: "M.S. in Graduate School of Culture Technology (Social Computing)",
     duration: "Mar. 2016 - Feb. 2018"
   },
   {
     title: "Ajou University",
-    description: "B.S. in Digital Media in College of Information and Technology",
+    description: "B.S. in Digital Media of College of Information and Technology",
     duration: "Mar. 2010 - Feb. 2016"
   },
   {
