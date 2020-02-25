@@ -229,8 +229,8 @@ function App() {
               <p>
                 Hi! I'm a data visualization researcher and engineer of Clova AI at the <a href="https://www.navercorp.com/">NAVER Corporation</a>. 
 
-                The goal of my current career is to design visualization that help people understand and interpret AI more easily.
-                I'm currently designing and developing various visaul analytics systems, which assists users in analyzing and steering deep learning models, hyperparameter optimization process, and active learning process, on the cloud-based machine learning platform.
+                The goal of my current career is to design visualizations so that people can undertand and interpret AI more easily, making it more accessible.
+                I'm currently designing and developing various visual analytics systems on cloud-based machine learning platform called NSML, in which users can perform and analyze training deep learning modeling, hyperparameter optimization, and active learning process.
 
                 I was interested in data analysis since undergraduate years, specifically in information visualization, 
                 and love the quote that “Never trust summary statistics alone, always visualize your data”.
