@@ -105,7 +105,7 @@ const paperItems = [
     }
   },
   {
-    title: "NetSet: Interactive Visualization for Analyzing Sets in Large Networks",
+    title: "An Interactive Visualization for Analyzing Sets in Large Networks",
     author: "Heungseok Park, Hongjun Lim, and Kyungwon Lee",
     venue: "Poster, IEEE VIS Conference, Visualization in Data Science (VDS) Symposium",
     date: "2015",
