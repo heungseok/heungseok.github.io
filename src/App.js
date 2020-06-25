@@ -160,28 +160,30 @@ class PaperItem extends React.PureComponent {
         }}>
         </div>
         <div className="main">
-          <div className="title">{title}</div>
-          <div>
-            {
-              authors.map((d, i) =>
-                <span
-                  key={d}
-                  style={{ fontWeight: d.trim() === "Heungseok Park" ? 800: "unset" }}
-                >
-                  {i === authors.length-1 ? d : `${d}, `}
-                </span>
-              )
-                }
-          </div>
-          <div className="venue">{venue}</div>
-          {
-            linkItem && <div className="linkItems">
-              {Object.keys(linkItem).map(type => <div><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
+          <div className="mainItem">
+            <div className="title">{title}</div>
+            <div>
+              {
+                authors.map((d, i) =>
+                  <span
+                    key={d}
+                    style={{ fontWeight: d.trim() === "Heungseok Park" ? 800: "unset" }}
+                  >
+                    {i === authors.length-1 ? d : `${d}, `}
+                  </span>
+                )
+                  }
             </div>
-          }
-        </div>               
-        <div className="sub">
-          {date}
+            <div className="venue">{venue}</div>
+            {
+              linkItem && <div className="linkItems">
+                {Object.keys(linkItem).map(type => <div><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
+              </div>
+            }
+          </div>
+          <div className="sub">
+            {date}
+          </div>
         </div>
       </div>
     )

@@ -118,22 +118,31 @@ a {
   background-position: bottom right;
 }
 
-.BioItem .main, .PaperItem .main {
+.BioItem .main {
   width: 70%;
 }
 
-.BioItem .main>div, .PaperItem .main>div {
-  padding-bottom: 8px;
+.PaperItem .main {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.PaperItem .main .mainItem {
+  width: 90%;
+}
 
 .BioItem .sub, .PaperItem .sub {
   color: grey;
 }
 
 .BioItem .title, .PaperItem .title {
+  padding-bottom: 8px;
   font-size: 1.1rem;
 }
+
+
 
 .venue {
   font-style: italic;
@@ -237,11 +246,22 @@ a {
   }
 
   .teaserImg {
-    width: 120px;
-    height: 100px;
+    width: 100%;
+    min-height: 350px;
+    max-height: 400px;
     margin-left: 0px;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .PaperItem {
+    flex-direction: column;
+    align-items: unset;
+    width: 100%;
+  }
+
+  .PaperItem .main {
+    width: 100%;
   }
   
 }
@@ -272,16 +292,24 @@ a {
   }
 
   .teaserImg {
-    width: 120px;
-    height: 100px;
+    width: 100%;
+    min-height: 130px;
+    max-height: 200px;
     margin-left: 0px;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   .PaperItem {
+    width: 100%;
     padding: 5px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .PaperItem .main {
+    width: 100%;
   }
 }
 
