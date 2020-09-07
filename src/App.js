@@ -40,7 +40,16 @@ const experienceItems = [
 
 
 const paperItems = [
-  
+  {
+    title: "HyperTendril: Visual Analytics for User-Driven Hyperparameter Tuning of Deep Neural Networks",
+    author: "Heungseok Park, Yoonsoo Nam, Ji-hoon Kim, and Jaegul Choo",
+    venue: "IEEE Transactions on Visualization and Computer Graphics, In Proc. IEEE VIS 2019 (VAST, acceptance rate: 24.8%) (to appear)",
+    date: "2020",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/HyperTendril.png?raw=true",
+    linkItem: {
+      paper: "https://arxiv.org/abs/2009.02078"
+    }
+  },
   {
     title: "VisualHyperTuner: Visual Analytics for User-Driven Hyperparameter Tuning of Deep Neural Networks",
     author: "Heungseok Park, Jinwoong Kim, Minkyu Kim, Ji-hoon Kim, Jaegul Choo, Jung-Woo Ha, and Nako Sung",
@@ -75,7 +84,7 @@ const paperItems = [
   },
   {
     title: "What makes a Successful Course at MOOCs? The Effects of the Structural Positions in Review Networks on the Course's Popularity and Satisfaction",
-    author: "Heungseok Park, Wonjae Lee",
+    author: "Heungseok Park and Wonjae Lee",
     venue: "Master Thesis",
     date: "2018",
     image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/master_thesis.png?raw=true",
