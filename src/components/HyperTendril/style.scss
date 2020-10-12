@@ -1,0 +1,35 @@
+.project_section {
+  padding: 20px 0;
+  line-height: 20px;
+  
+  .title {
+    color: #999;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    padding: 0 20%;
+  }
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+  overflow: hidden;
+  width: 80%;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80%;
+}
