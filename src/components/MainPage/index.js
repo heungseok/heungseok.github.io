@@ -47,7 +47,8 @@ const paperItems = [
     date: "2020",
     image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/HyperTendril.png?raw=true",
     linkItem: {
-      paper: "https://arxiv.org/abs/2009.02078"
+      paper: "https://arxiv.org/abs/2009.02078",
+      website: `${process.env.PUBLIC_URL}/hypertendril`,
     }
   },
   {
