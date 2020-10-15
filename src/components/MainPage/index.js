@@ -242,8 +242,8 @@ export default function MainPage() {
             <p>
               Hi! I'm a data visualization researcher and engineer of Clova AI at the <a href="https://www.navercorp.com/">NAVER Corporation</a>. 
 
-              The goal of my current career is to design visualizations so that people can undertand and interpret AI more easily, making it more accessible.
-              I'm currently designing and developing various visual analytics systems on cloud-based machine learning platform called NSML, in which users can perform and analyze deep learning modeling, hyperparameter optimization, and active learning process.
+              The goal of my current career is to design visualizations to assist people in understand and interpret AI more easily, making it more accessible.
+              I'm currently designing and developing various visual analytics systems on a cloud-based machine learning platform called NSML, in which internal users (1000+) at the NAVER and LINE can perform and analyze the processes of machine learning modeling, hyperparameter optimization, active learning, and others.
 
               I was interested in data analysis since undergraduate years, specifically in information visualization, 
               and love the quote that “Never trust summary statistics alone, always visualize your data”.
