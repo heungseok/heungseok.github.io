@@ -43,10 +43,11 @@ const paperItems = [
   {
     title: "HyperTendril: Visual Analytics for User-Driven Hyperparameter Tuning of Deep Neural Networks",
     author: "Heungseok Park, Yoonsoo Nam, Ji-hoon Kim, and Jaegul Choo",
-    venue: "IEEE Transactions on Visualization and Computer Graphics, In Proc. IEEE VIS 2020 (VAST, acceptance rate: 24.8%) (to appear)",
+    venue: "IEEE Transactions on Visualization and Computer Graphics, In Proc. IEEE VIS 2020 (VAST, acceptance rate: 24.8%) (early access)",
     date: "2020",
     image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/HyperTendril.png?raw=true",
     linkItem: {
+      'IEEE Xplore': 'https://ieeexplore.ieee.org/document/9222338',
       paper: "https://arxiv.org/abs/2009.02078",
       website: `${process.env.PUBLIC_URL}/hypertendril`,
     }
