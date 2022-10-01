@@ -45,6 +45,10 @@ a {
   color: dodgerblue;
 }
 
+a:hover {
+  border-bottom: 1px solid rgba(30, 144, 255, 0.8);
+}
+
 .contents.flex {
   display: flex;
 }
@@ -142,8 +146,6 @@ a {
   font-size: 1.1rem;
 }
 
-
-
 .venue {
   font-style: italic;
 }
@@ -156,15 +158,22 @@ a {
 }
 
 /* media query */
+/* for dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: white;
+  }
+}
+
+/* for responsive layout (mobile and pad) */
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
 
 @media (min-width: 1281px) {
-  html {
-    /* font-size: 14px; */
-  }
   .contents.flex {
     flex-direction: row;
   }
