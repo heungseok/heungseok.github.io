@@ -7,17 +7,17 @@ import { LinkedIn } from '@material-ui/icons';
 const educationItems = [
   {
     title: "KAIST (Korea Advanced Institute of Science and Technology)",
-    description: "M.S. in Graduate School of Culture Technology (Social Computing)",
+    subTitle: "M.S. in Graduate School of Culture Technology (Social Computing)",
     duration: "Mar. 2016 - Feb. 2018"
   },
   {
     title: "Ajou University",
-    description: "B.S. in Digital Media of College of Information and Technology",
+    subTitle: "B.S. in Digital Media of College of Information and Technology",
     duration: "Mar. 2010 - Feb. 2016"
   },
   {
     title: "University of Nevada, Las Vegas",
-    description: "Visiting Scholar in College of Engineering",
+    subTitle: "Visiting Scholar in College of Engineering",
     duration: "Jan. 2015 - May. 2015"
   },
 ];
@@ -25,14 +25,22 @@ const educationItems = [
 
 const experienceItems = [
   {
-    title: "Clova AI, NAVER",
-    description: "Visualization Engineer & Researcher, Front-end web developer",
+    title: "CLOVA in NAVER",
+    subTitle: "Visualization Engineer & Researcher, Front-end web developer",
+    description: [
+      'Lead in designing and engineering of front-end part of a machine learning platform.',
+      'Research various visual analytics systems for analyzing machine learning models.',
+      'Develop a Design system to reuse basic UI components within a consistent design theme.'
+    ],
     duration: "Feb. 2018 - Now",
     links: "https://clova.ai/"
   },
   {
     title: "3Secondz",
-    description: "Visualization Engineer, Front-end web developer",
+    subTitle: "Visualization Engineer, Front-end web developer",
+    description: [
+      'Develop visualization modules that represents car racing data.',
+    ],
     duration: "May. 2017 - Jan. 2018",
     links: "https://3secondz.com/"
   }
@@ -43,7 +51,7 @@ const paperItems = [
   {
     title: "HyperTendril: Visual Analytics for User-Driven Hyperparameter Tuning of Deep Neural Networks",
     author: "Heungseok Park, Yoonsoo Nam, Ji-hoon Kim, and Jaegul Choo",
-    venue: "IEEE Transactions on Visualization and Computer Graphics, In Proc. IEEE VIS 2020 (VAST, acceptance rate: 24.8%) (early access)",
+    venue: "IEEE Transactions on Visualization and Computer Graphics, In Proc. IEEE VIS 2020 (VAST, acceptance rate: 24.8%)",
     date: "2020",
     image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/HyperTendril.png?raw=true",
     linkItem: {
@@ -141,64 +149,62 @@ const presentationItems = [
   },
 ]
 
-class BioItem extends React.PureComponent {
-
-  render() {
-    const { item: { title, description, duration, links }} = this.props;
-    return(
-      <div className="BioItem">
+const BioItem = (props) => {
+  const { item: { title, subTitle, description, duration, links }} = props;
+  return(
+    <div className="bio-item-wrapper">
+      <div className="bio-item">
         <div className="main">
           <div className="title">{links ? <a href={links} target="_blank">{title}</a> : title}</div>
-          <div>{description}</div>
+          <div className='sub-title'>{subTitle}</div>
+          
         </div>               
         <div className="sub">
           {duration}
         </div>
       </div>
-    )
-  }
+      <div className='description'>{Array.isArray(description) ? <ul>{description.map((d, i) => (<li key={i}>{d}</li>))}</ul> : description}</div>
+    </div>
+  )
 }
 
-class PaperItem extends React.PureComponent {
-
-  render() {
-    const { item: { title, author, venue, image, date, linkItem }} = this.props;
-    const authors = author.split(',');
-    return(
-      <div className="PaperItem">
-        <div className="teaserImg" style={{
-          backgroundImage: `url("${image}")`
-        }}>
-        </div>
-        <div className="main">
-          <div className="mainItem">
-            <div className="title">{title}</div>
-            <div>
-              {
-                authors.map((d, i) =>
-                  <span
-                    key={d}
-                    style={{ fontWeight: d.trim() === "Heungseok Park" ? 800: "unset" }}
-                  >
-                    {i === authors.length-1 ? d : `${d}, `}
-                  </span>
-                )
-                  }
-            </div>
-            <div className="venue">{venue}</div>
+const PaperItem = (props) => {
+  const { item: { title, author, venue, image, date, linkItem }} = props;
+  const authors = author.split(',');
+  return(
+    <div className="paper-item">
+      <div className="teaserImg" style={{
+        backgroundImage: `url("${image}")`
+      }}>
+      </div>
+      <div className="main">
+        <div className="mainItem">
+          <div className="title">{title}</div>
+          <div>
             {
-              linkItem && <div className="linkItems">
-                {Object.keys(linkItem).map(type => <div><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
-              </div>
-            }
+              authors.map((d, i) =>
+                <span
+                  key={d}
+                  style={{ fontWeight: d.trim() === "Heungseok Park" ? 800: "unset" }}
+                >
+                  {i === authors.length-1 ? d : `${d}, `}
+                </span>
+              )
+                }
           </div>
-          <div className="sub">
-            {date}
-          </div>
+          <div className="venue">{venue}</div>
+          {
+            linkItem && <div className="linkItems">
+              {Object.keys(linkItem).map(type => <div><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
+            </div>
+          }
+        </div>
+        <div className="sub">
+          {date}
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default function MainPage() {
@@ -227,7 +233,7 @@ export default function MainPage() {
           </div>
           <div className="contacts">
             <div>
-              <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2@gmail.com</a>
+              <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2 at gmail</a>
             </div>
             <div>
               <Icon>school</Icon><a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>
@@ -240,17 +246,19 @@ export default function MainPage() {
         <div className="bio">
           <div className="intro">
             <p>
-              Hi! I'm a data visualization researcher and engineer of Clova AI at the <a href="https://www.navercorp.com/">NAVER Corporation</a>. 
-
-              The goal of my current career is to design visualizations to assist people in understand and interpret AI more easily, making it more accessible.
-              I'm currently designing and developing various visual analytics systems on a cloud-based machine learning platform called NSML, in which internal users (1000+) at the NAVER and LINE can perform and analyze the processes of machine learning modeling, hyperparameter optimization, active learning, and others.
-
-              I was interested in data analysis since undergraduate years, specifically in information visualization, 
-              and love the quote that “Never trust summary statistics alone, always visualize your data”.
-
+              Hi! I'm a data visualization researcher and engineer at <a href="https://www.navercorp.com/">NAVER Corporation</a>.
+              I build various visual analytics systems and machine learning platform called NSML, in which internal users (1,000+) at the NAVER and LINE can build machine learning models with experiment tracking, model management, and optimization.
+              The goal of my career is to design visualizations to assist people in understand and interpret AI more easily, making it more accessible.
+              {/* I was interested in data analysis since undergraduate years, specifically in information visualization, 
+              and love the quote that “Never trust summary statistics alone, always visualize your data”. */}
             </p>
           </div>
-
+          <div>
+            <h3>Work Experience</h3>
+            {
+              experienceItems.map(d => <BioItem key={d.title} item={d} />)
+            }
+          </div>
           <div>
             <h3>Education</h3>
             {
@@ -258,12 +266,7 @@ export default function MainPage() {
             }
           </div>
 
-          <div>
-            <h3>Experience</h3>
-            {
-              experienceItems.map(d => <BioItem key={d.title} item={d} />)
-            }
-          </div>
+          
         </div>
 
       </div>

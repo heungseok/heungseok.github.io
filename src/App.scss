@@ -65,6 +65,10 @@ a:hover {
   align-items: center;
 }
 
+.contacts a {
+  white-space: nowrap;
+}
+
 .profile .contacts {
   display: flex;
   flex-direction: column;
@@ -101,12 +105,20 @@ a:hover {
   text-rendering: auto;
 }
 
-.BioItem, .PaperItem {
+.bio-item, .paper-item {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   align-items: center;
   font-size: 0.9rem;
+}
+
+.bio-item {
+  align-items: baseline;
+
+  .sub-title {
+    color: #404040;
+  }
 }
 
 .teaserImg {
@@ -122,26 +134,41 @@ a:hover {
   background-position: bottom right;
 }
 
-.BioItem .main {
-  width: 70%;
+.bio-item-wrapper {
+  .main {
+    width: 70%;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding-left: 10px;
+
+    ul {
+      padding-inline-start: 15px;
+    }
+
+    li {
+      padding-bottom: 8px;
+    }
+  }
 }
 
-.PaperItem .main {
+.paper-item .main {
   width: 75%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.PaperItem .main .mainItem {
+.paper-item .main .mainItem {
   width: 90%;
 }
 
-.BioItem .sub, .PaperItem .sub {
+.bio-item .sub, .paper-item .sub {
   color: grey;
 }
 
-.BioItem .title, .PaperItem .title {
+.bio-item .title, .paper-item .title {
   padding-bottom: 8px;
   font-size: 1.1rem;
 }
@@ -250,6 +277,10 @@ a:hover {
     justify-content: space-between;
   }
 
+  .profile .contacts {
+    padding: 10px;
+  }
+
   .bio {
     width: 100%;
   }
@@ -263,13 +294,13 @@ a:hover {
     background-size: contain;
   }
 
-  .PaperItem {
+  .paper-item {
     flex-direction: column;
     align-items: unset;
     width: 100%;
   }
 
-  .PaperItem .main {
+  .paper-item .main {
     width: 100%;
   }
   
@@ -292,6 +323,10 @@ a:hover {
     flex-direction: column;
   }
 
+  .profile .contacts {
+    padding: 10px;
+  }
+
   .bio {
     width: 100%;
   }
@@ -309,7 +344,7 @@ a:hover {
     background-size: contain;
   }
 
-  .PaperItem {
+  .paper-item {
     width: 100%;
     padding: 5px;
     font-size: 0.8rem;
@@ -317,7 +352,7 @@ a:hover {
     align-items: unset;
   }
 
-  .PaperItem .main {
+  .paper-item .main {
     width: 100%;
   }
 }
