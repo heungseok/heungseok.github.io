@@ -3,6 +3,7 @@ import React from 'react'
 
 import { Icon } from '@material-ui/core';
 import { LinkedIn } from '@material-ui/icons';
+import { ProfileImage } from './ProfileImage';
 
 const educationItems = [
   {
@@ -71,7 +72,7 @@ const paperItems = [
     }
   },
   {
-    title: "CHOPT : Automated Hyperparameter Optimization Framework for Cloud-Based Machine Learning Platforms",
+    title: "CHOPT: Automated Hyperparameter Optimization Framework for Cloud-Based Machine Learning Platforms",
     author: "Jinwoong Kim, Minkyu Kim, Heungseok Park, Ernar Kusdavletov, Dongjun Lee, Adrian Kim, Ji-Hoon Kim, Jung-Woo Ha, and Nako Sung",
     venue: "arXiv",
     date: "2018",
@@ -195,7 +196,7 @@ const PaperItem = (props) => {
           <div className="venue">{venue}</div>
           {
             linkItem && <div className="linkItems">
-              {Object.keys(linkItem).map(type => <div><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
+              {Object.keys(linkItem).map(type => <div key={linkItem[type]}><a target="_blank" href={linkItem[type]}>{type}</a></div>)}
             </div>
           }
         </div>
@@ -227,10 +228,7 @@ export default function MainPage() {
 
       <div className="contents flex row">
         <div className="profile">
-          <div>
-            {/* <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/raw/master/src/images/profile_image.jpeg" alt="failed to load"/> */}
-            <img width="150px" height="200px" src="https://github.com/heungseok/heungseok.github.io/blob/master/static/images/profile_image.jpeg?raw=true" alt="failed to load"/>
-          </div>
+          <ProfileImage />
           <div className="contacts">
             <div>
               <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2 at gmail</a>

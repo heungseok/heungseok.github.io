@@ -56,6 +56,15 @@ a:hover {
 .profile {
   width: 200px;
   padding: 20px;
+
+  .profile-container {
+    position: relative;
+
+    canvas {
+      left: 0 !important;
+      top: 0 !important;
+    }
+  }
 }
 
 .contacts>div {
@@ -117,7 +126,7 @@ a:hover {
   align-items: baseline;
 
   .sub-title {
-    color: #404040;
+    color: #909090;
   }
 }
 
