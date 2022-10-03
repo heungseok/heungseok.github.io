@@ -1,7 +1,7 @@
 ## Personal Homepage
 
 ### How to develop
-- npm install
+- npm install (or yarn)
 - yarn start
 
 
