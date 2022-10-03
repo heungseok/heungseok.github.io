@@ -231,7 +231,7 @@ export default function MainPage() {
               {/* I was interested in data analysis since undergraduate years, specifically in information visualization, 
               and love the quote that “Never trust summary statistics alone, always visualize your data”. */}
             </p>
-            <a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>, <a href="https://www.linkedin.com/in/heungseok2/">LinkedIn</a>, <a href="mailto:heungseok2@gmail.com">heungseok2 at gmail</a>
+            <a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>, <a href="https://www.linkedin.com/in/heungseok2/">LinkedIn</a>, <a href="https://github.com/heungseok">GitHub</a>, <a href="mailto:heungseok2@gmail.com">heungseok2 at gmail</a>
           </div>
         </div>
       </div>
