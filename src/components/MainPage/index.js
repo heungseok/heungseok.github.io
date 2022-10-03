@@ -1,8 +1,4 @@
 import React from 'react'
-
-
-import { Icon } from '@material-ui/core';
-import { LinkedIn } from '@material-ui/icons';
 import { ProfileImage } from './ProfileImage';
 
 const educationItems = [
@@ -29,18 +25,19 @@ const experienceItems = [
     title: "CLOVA in NAVER",
     subTitle: "Visualization Engineer & Researcher, Front-end web developer",
     description: [
-      'Lead in designing and engineering of front-end part of a machine learning platform.',
-      'Research various visual analytics systems for analyzing machine learning models.',
-      'Develop a Design system to reuse basic UI components within a consistent design theme.'
+      'Managed front-end parts of a machine learning platform including planning, design, and development.',
+      'Built various visual analytics systems for analyzing and optimizing machine learning models.',
+      'Published various research papers related to machine learning platforms.',
+      'Developed a Design system to reuse basic UI components within a consistent design theme.',
     ],
-    duration: "Feb. 2018 - Now",
+    duration: "Feb. 2018 - Present",
     links: "https://clova.ai/"
   },
   {
     title: "3Secondz",
     subTitle: "Visualization Engineer, Front-end web developer",
     description: [
-      'Develop visualization modules that represents car racing data.',
+      'Developed data visualization modules that represents car racing data, where users can review and analyze their past driving records comprehensively.',
     ],
     duration: "May. 2017 - Jan. 2018",
     links: "https://3secondz.com/"
@@ -209,8 +206,6 @@ const PaperItem = (props) => {
 }
 
 export default function MainPage() {
-
-
   return(
     <div className="container">
       <div className="header">
@@ -221,37 +216,29 @@ export default function MainPage() {
         <div className="header-items">
           {/* <a href="https://github.com/heungseok/heungseok.github.io/raw/master/src/documents/CV_HeungseokPark.pdf">CV (PDF)</a> */}
           <a href="/static/documents/CV_HeungseokPark.pdf">CV (PDF)</a>
-        </div>
-        
+        </div>        
       </div>
-      
-
       <div className="contents flex row">
         <div className="profile">
           <ProfileImage />
-          <div className="contacts">
-            <div>
-              <Icon>email</Icon><a href="mailto:heungseok2@gmail.com">heungseok2 at gmail</a>
-            </div>
-            <div>
-              <Icon>school</Icon><a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>
-            </div>
-            <div>
-              <LinkedIn style={{ marginRigth: '5px'}} /><a href="https://www.linkedin.com/in/heungseok2/"> LinkedIn</a>
-            </div>
-          </div>
         </div>
         <div className="bio">
           <div className="intro">
             <p>
               Hi! I'm a data visualization researcher and engineer at <a href="https://www.navercorp.com/">NAVER Corporation</a>.
-              I build various visual analytics systems and machine learning platform called NSML, in which internal users (1,000+) at the NAVER and LINE can build machine learning models with experiment tracking, model management, and optimization.
+              I have build various visual analytics systems and machine learning platform called NSML, in which internal users (1,000+) at the NAVER and LINE can build machine learning models with experiment tracking, model management, and optimization.
               The goal of my career is to design visualizations to assist people in understand and interpret AI more easily, making it more accessible.
               {/* I was interested in data analysis since undergraduate years, specifically in information visualization, 
               and love the quote that “Never trust summary statistics alone, always visualize your data”. */}
             </p>
+            <a href="https://scholar.google.com/citations?user=Shc__D8AAAAJ">Google Scholar</a>, <a href="https://www.linkedin.com/in/heungseok2/">LinkedIn</a>, <a href="mailto:heungseok2@gmail.com">heungseok2 at gmail</a>
           </div>
-          <div>
+        </div>
+      </div>
+
+      <div className="contents flex row">
+        <div className="bio full-width">
+        <div>
             <h3>Work Experience</h3>
             {
               experienceItems.map(d => <BioItem key={d.title} item={d} />)
@@ -263,10 +250,7 @@ export default function MainPage() {
               educationItems.map(d => <BioItem key={d.title} item={d} />)
             }
           </div>
-
-          
         </div>
-
       </div>
 
       <div className="contents flex row">
