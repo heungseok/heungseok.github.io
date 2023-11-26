@@ -22,20 +22,29 @@ const educationItems = [
 
 const experienceItems = [
   {
-    title: "CLOVA in NAVER",
-    subTitle: "Visualization Engineer & Researcher, Front-end web developer",
+    title: "NAVER Labs",
+    subTitle: "Software Engineer",
     description: [
-      'Managed front-end parts of a machine learning platform including planning, design, and development.',
+      'Developed Robot platform software to monitor and control various robots in a smart building (NAVER 1784).',
+    ],
+    duration: "June. 2023 - Present",
+    links: "https://www.naverlabs.com/"
+  },
+  {
+    title: "CLOVA in NAVER",
+    subTitle: "Visualization Engineer & Researcher, Software Engineer",
+    description: [
+      'Lead front-end parts of a machine learning platform including planning, design, and development.',
       'Built various visual analytics systems for analyzing and optimizing machine learning models.',
       'Published various research papers related to machine learning platforms.',
       'Developed a Design system to reuse basic UI components within a consistent design theme.',
     ],
-    duration: "Feb. 2018 - Present",
+    duration: "Feb. 2018 - June. 2023",
     links: "https://clova.ai/"
   },
   {
     title: "3Secondz",
-    subTitle: "Visualization Engineer, Front-end web developer",
+    subTitle: "Visualization Engineer, Front-end Engineer",
     description: [
       'Developed data visualization modules that represents car racing data, where users can review and analyze their past driving records comprehensively.',
     ],
@@ -46,6 +55,17 @@ const experienceItems = [
 
 
 const paperItems = [
+  {
+    title: "HyperTendril: Visual Analytics for User-Driven Hyperparameter Tuning of Deep Neural Networks",
+    author: "Heungseok Park, Aeree Cho, Hyojun Jeon, Hayoung Lee, Youngil Yang, Sungjae Lee, Heungsub Lee, and Jaegul Choo",
+    venue: "IEEE Visualization in Data Science, In Proc. IEEE VDS 2023",
+    date: "2023",
+    image: "https://github.com/heungseok/heungseok.github.io/blob/master/static/images/thumbnails/HPCClusterScape.png?raw=true",
+    linkItem: {
+      paper: "https://arxiv.org/abs/2310.02120",
+      deview: 'https://deview.kr/2023/sessions/550',
+    }
+  },
   {
     title: "HyperTendril: Visual Analytics for User-Driven Hyperparameter Tuning of Deep Neural Networks",
     author: "Heungseok Park, Yoonsoo Nam, Ji-hoon Kim, and Jaegul Choo",
@@ -225,9 +245,11 @@ export default function MainPage() {
         <div className="bio">
           <div className="intro">
             <p>
-              Hi! I'm a data visualization researcher and engineer at <a href="https://www.navercorp.com/">NAVER Corporation</a>.
-              I have build various visual analytics systems and machine learning platform called NSML, in which internal users (1,000+) at the NAVER and LINE can build machine learning models with experiment tracking, model management, and optimization.
-              The goal of my career is to design visualizations to assist people in understand and interpret AI more easily, making it more accessible.
+              Hi! I am software engineer in <a href="https://www.navercorp.com/">NAVER Labs</a>,
+              focusing on building diverse software applications for robot management systems. My expertise lies in developing crucial tools such as robot monitoring platforms and behavior tree editor interfaces.
+              Before joining NAVER Labs, I held roles as a data visualization researcher and engineer at CLOVA in <a href="https://www.navercorp.com/">NAVER Corporation</a>.
+              During this period, I led the development of various visual analytics systems and machine learning platform called NSML, in which internal researchers at the NAVER and LINE can build machine learning models with experiment tracking, model management, and optimization.
+              The goal of my career is to design visualizations to assist people in understand and interpret Robot and AI more easily, making these technologies more accessible.
               {/* I was interested in data analysis since undergraduate years, specifically in information visualization, 
               and love the quote that “Never trust summary statistics alone, always visualize your data”. */}
             </p>
